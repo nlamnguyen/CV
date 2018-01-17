@@ -1,31 +1,3 @@
-
-Skip to content
-This repository
-
-    Pull requests
-    Issues
-    Marketplace
-    Explore
-
-    @nlamnguyen
-
-0
-0
-
-    0
-
-nlamnguyen/CV
-Code
-Issues 0
-Pull requests 0
-Projects 0
-Wiki
-Insights
-Settings
-CV/orbit-v1.0/index.html
-71cac3c 4 minutes ago
-lam nguyen first commit
-233 lines (205 sloc) 14.6 KB
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
@@ -258,16 +230,3 @@ lam nguyen first commit
 </body>
 </html> 
 
-    © 2018 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Help
-
-    Contact GitHub
-    API
-    Training
-    Shop
-    Blog
-    About
