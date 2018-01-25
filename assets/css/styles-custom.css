@@ -43,7 +43,7 @@ p {
   line-height: 1.5;
 }
 .wrapper {
-  background: #4CAC9D;
+  background: #008888;
   max-width: 960px;
   margin: 0 auto;
   position: relative;
@@ -52,7 +52,7 @@ p {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .sidebar-wrapper {
-  background: #4CAC9D;
+  background: #008888;
   position: absolute;
   right: 0;
   width: 240px;
@@ -215,6 +215,11 @@ p {
   margin-bottom: 10px;
   color: #97AAC3;
 }
+/*ajout de .detail pour modifier le format des textes*/
+.main-wrapper .details {
+  text-align: justify;
+}
+
 .main-wrapper .project-title {
   font-size: 16px;
   font-weight: 400;
@@ -230,6 +235,31 @@ p {
 .skillset .item {
   margin-bottom: 15px;
   overflow: hidden;
+}
+/* my skillset custom
+.skillset .level-group {
+  font-size: 16px;
+  text-decoration: underline;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+*/
+.skillset .skills-group  > h3 {
+  font-size: 16px;
+  text-decoration: underline;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .skillset .skills-group > h3 {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
 }
 .skillset .level-title {
   font-size: 14px;
