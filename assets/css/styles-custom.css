@@ -241,6 +241,9 @@ p {
 .main-wrapper .tabSize{
   padding-left: 2em;
 }
+.main-wrapper .italic{
+  font-style: italic;
+}
 
 .skillset .item {
   margin-bottom: 15px;
