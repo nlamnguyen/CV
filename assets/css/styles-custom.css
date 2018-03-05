@@ -210,6 +210,13 @@ p {
   margin-bottom: 0;
   font-weight: 500;
 }
+.main-wrapper .assignment-title {
+  color: #3F4650;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 1;
+  font-weight: 500;
+}
 .main-wrapper .time {
   position: absolute;
   right: 0;
@@ -224,6 +231,9 @@ p {
 .main-wrapper .details {
   text-align: justify;
 }
+.main-wrapper .tools {
+  text-align: justify;
+}
 
 .main-wrapper .project-title {
   font-size: 16px;
@@ -231,12 +241,14 @@ p {
   margin-top: 0;
   margin-bottom: 0px;
   color: #3F4650;
+
 }
 .main-wrapper .projects-section .intro {
   margin-bottom: 30px;
 }
 .main-wrapper .projects-section .item {
   margin-bottom: 15px;
+  text-align: justify;
 }
 .main-wrapper .tabSize{
   padding-left: 2em;
