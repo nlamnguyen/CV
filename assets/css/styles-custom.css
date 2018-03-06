@@ -227,11 +227,10 @@ p {
   margin-bottom: 10px;
   color: #97AAC3;
 }
-/*ajout de .detail pour modifier le format des textes*/
 .main-wrapper .details {
   text-align: justify;
 }
-.main-wrapper .tools {
+.main-wrapper .mytools {
   text-align: justify;
 }
 
