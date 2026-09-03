@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="{{ meta.lang }}">
+<!--<![endif]-->
+
+<head>
+    <title>{{ meta.title }}</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ meta.description }}">
+    <meta name="author" content="{{ meta.author }}">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+        href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles-custom.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Généré automatiquement par build.py - NE PAS ÉDITER À LA MAIN -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar-wrapper">
+            <div class="profile-container">
+                <img class="profile" src="{{ profile.photo }}" alt="" />
+                <h1 class="name">{{ profile.name }}</h1>
+            </div>
+            <!--//profile-container-->
+            <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+                    {% for c in contact %}
+                    <li class="{{ c.type }}">
+                        <i class="{{ c.icon }}"></i>
+                        <a href="{{ c.href }}">{{ c.label }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!--//contact-container-->
+            <div class="education-container container-block">
+                <h2 class="container-block-title">Formation</h2>
+                {% for e in education %}
+                <div class="item">
+                    <h4 class="degree">{{ e.degree }}</h4>
+                    <h5 class="meta">{{ e.school }}</h5>
+                    <div class="time">{{ e.time }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <!--//education-container-->
+            <div class="languages-container container-block">
+                <h2 class="container-block-title">Langues</h2>
+                <ul class="list-unstyled interests-list">
+                    {% for l in languages %}
+                    <li>{{ l.name }} <span class="lang-desc">({{ l.level }})</span></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!--//interests-->
+            <div class="interests-container container-block">
+                <h2 class="container-block-title">Centres d'intérêt</h2>
+                <ul class="list-unstyled interests-list">
+                    {% for i in interests %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <!--//sidebar-wrapper-->
+        <div class="main-wrapper">
+            <section class="section summary-section">
+                <h2 class="section-title"><i class="fa fa-user"></i>Mon parcours</h2>
+                <div class="summary">
+                    {% for p in summary %}
+                    <p>{{ p }}</p>
+                    {% endfor %}
+                </div>
+                <!--//summary-->
+            </section>
+            <!--//section-->
+
+            <section class="section experiences-section">
+                <h2 class="section-title"><i class="fa fa-briefcase"></i>Expériences</h2>
+                {% for exp in experiences %}
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">{{ exp.title }}</h3>
+                            <div class="time">{{ exp.time }}</div>
+                        </div>
+                        <div class="company">{% if exp.company_href %}<a href="{{ exp.company_href }}">{{ exp.company }}</a>{% else %}{{ exp.company }}{% endif %}</div>
+                    </div>
+                    <!--//meta-->
+                    <div class="details">
+                        <h4 class="assignment-title">{{ exp.assignment_title }}</h4>
+                        {% for p in exp.paragraphs %}
+                        <p>{{ p }}</p>
+                        {% endfor %}
+                        <p class="mytools">{{ exp.tools }}</p>
+                    </div>
+                </div>
+                <!--//item-->
+                {% endfor %}
+            </section>
+            <!--//section-->
+
+            <section class="section projects-section">
+                <h2 class="section-title"><i class="fa fa-archive"></i>Réalisations</h2>
+                <div class="intro">
+                    <p></p>
+                </div>
+                <!--//intro-->
+                {% for a in achievements %}
+                <div class="item">
+                    <p class="project-title"><a href="{{ a.href }}">{{ a.title }}</a></p>
+                    <p>
+                        <span class="project-tagline">{{ a.description }}</span>
+                    </p>
+                </div>
+                {% endfor %}
+            </section>
+            <!--//section-->
+
+            <section class="skills-section section">
+                <h2 class="section-title"><i class="fa fa-rocket"></i>Compétences et maîtrise</h2>
+                <div class="skillset">
+                    {% for group in skills %}
+                    <div class="item">
+                        <div class="skills-group">
+                            <h3>{{ group.group }}</h3>
+                        </div>
+                    </div>
+                    <!--skill-group-->
+                    {% for s in group['items'] %}
+                    <div class="item">
+                        <h3 class="level-title">{{ s.name }}</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="{{ s.level }}%"></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+        <!--//main-body-->
+    </div>
+
+    <footer class="footer">
+        <div class="text-center">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a
+                    href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div>
+        <!--//container-->
+    </footer>
+    <!--//footer-->
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-1.11.3.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
